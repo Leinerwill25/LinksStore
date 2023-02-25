@@ -1,0 +1,290 @@
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('../Amsterdam/Amsterdam.otf') format('truetype');
+    font-style: oblique;
+    font-weight: normal;
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.1)),url(../images/Fondo.jpg);
+}
+
+
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    margin-top: 20px;
+}
+
+.container-logo{
+    
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    
+}
+
+
+.logo{
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+    }
+    
+.logo img{
+    margin-right: 65%;
+    /*margin-top: 20px;*/
+        width: 30%;
+        opacity: 0.7;
+        
+        
+        
+    background: rgba(0, 0, 0, 0.189);
+    border-radius: 50%;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: solid 1px;
+    border-color: #ff010197;
+    
+    
+    }
+
+
+body::-webkit-scrollbar{
+    width: 7px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #ff0101;
+    border-radius: 50px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+    position: relative;
+    justify-content: center;
+    align-items: end;
+    margin-left: 20%;
+    
+
+    
+}
+
+button{
+    margin-right: 15px;
+    width: 70%;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 16px;
+    margin-top: 15px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+    background: rgba(0, 0, 0, 0.432);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: .25em solid rgba(255, 255, 255, 0.541);
+
+
+--glow-color: rgba(106, 0, 0, 0.578);
+ --glow-spread-color: rgba(119, 0, 0, 0.781);
+ --enhanced-glow-color: rgb(255, 0, 0);
+ --btn-color: rgb(136, 61, 61);
+
+transition: 300ms;
+    z-index: 200;
+}
+
+button::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+    filter: blur(2em);
+    opacity: .7;
+    
+   }
+   
+
+   button:hover {
+    color: var(--btn-color);
+    border: .25em solid var(--glow-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em white,
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   button:active {
+    box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+button a{
+    text-decoration: none;
+    font-size: 120%;
+    font-family: 'Amsterdam';
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+button i{
+    color: white;
+    text-align: start;
+    font-size: 330%;
+    opacity: 0;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: 10px;
+    
+    
+}
+button:hover i{
+    transition: 300ms;
+    opacity: 1;
+    margin-left: -70px;
+    
+}
+
+.titulo{
+    color: white;
+    margin: auto;
+    margin-top: 30px;
+    margin-left: 33%;
+    font-family: 'Amsterdam';
+}
+
+.titulo h4{
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    
+    
+}
+
+.titulo h2{
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    font-size: 28px;
+    
+}
+
+@media screen and (max-width:600px){
+    .titulo{
+        margin-left: 26%;
+        margin-right: 15px;
+        
+    }
+    body::-webkit-scrollbar{
+        width: 5px;
+    }
+    
+    body::-webkit-scrollbar-thumb{
+        background: #ff0101;
+        border-radius: 50px;
+    }
+}
+@media screen and (max-width:400px){
+    .titulo{
+        margin-left: 26%;
+        margin-right: 30px;
+        
+    }
+    .titulo h2{
+        font-size: 120%;
+    }
+    
+    button:hover i{
+        transition: 300ms;
+        opacity: 1;
+        margin-left: -50px;
+        font-size: 200%;
+        margin-top: 25px;
+        
+    }
+    body::-webkit-scrollbar{
+        width: 4px;
+    }
+    
+    
+    body::-webkit-scrollbar-thumb{
+        background: #ff0101;
+        border-radius: 50px;
+    }
+    button{
+        height: 50%;
+    }
+    
+}
+
+.linea{
+    width: 80%;
+    height: 0.5px;
+    background-color: white;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 40%;
+}
+
+.Ultimo h2{
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: white;
+    margin-bottom: 20px;
+    
+}
+.Ultimo1 h2{
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    font-size: 18px;
+    margin-top: 60px;
+    color: white;
+    font-family: 'Amsterdam';
+    
+}
